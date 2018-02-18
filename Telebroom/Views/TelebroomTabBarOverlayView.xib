@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TelebroomTabBarOverlayView" customModule="Telebroom" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TelebroomTabBarOverlayView" customModule="Telebroom" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XG5-am-w56">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <view key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="wXt-N3-Hjy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqv-pb-IoY" userLabel="Left Container">
+                                <rect key="frame" x="0.0" y="0.0" width="152" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqf-aD-kaz" customClass="BubbleButton" customModule="Telebroom" customModuleProvider="target">
+                                        <rect key="frame" x="26.5" y="0.0" width="100" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="jVo-ZL-kgD"/>
+                                        </constraints>
+                                        <state key="normal" image="btn_search_off">
+                                            <color key="titleColor" red="0.37647058823529411" green="0.33725490196078434" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSearchButtonTapped:" destination="iN0-l3-epB" eventType="touchDown" id="crZ-ke-RmC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Pqf-aD-kaz" secondAttribute="bottom" id="MDk-1d-i72"/>
+                                    <constraint firstItem="Pqf-aD-kaz" firstAttribute="top" secondItem="rqv-pb-IoY" secondAttribute="top" id="Y3x-Uj-NaP"/>
+                                    <constraint firstItem="Pqf-aD-kaz" firstAttribute="centerX" secondItem="rqv-pb-IoY" secondAttribute="centerX" id="m5G-bg-jhb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taz-Ko-Z2t" userLabel="Right Container">
+                                <rect key="frame" x="222" y="0.0" width="153" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItY-3T-QmO" customClass="BubbleButton" customModule="Telebroom" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="0.0" width="100" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Kyn-mY-0Il"/>
+                                        </constraints>
+                                        <state key="normal" image="btn_profile_off">
+                                            <color key="titleColor" red="0.37647058823529411" green="0.33725490196078434" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onProfileButtonTapped:" destination="iN0-l3-epB" eventType="touchDown" id="7Mn-XW-JD1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ItY-3T-QmO" secondAttribute="bottom" id="gTe-A7-tq1"/>
+                                    <constraint firstItem="ItY-3T-QmO" firstAttribute="centerX" secondItem="taz-Ko-Z2t" secondAttribute="centerX" id="hSt-vR-d1n"/>
+                                    <constraint firstItem="ItY-3T-QmO" firstAttribute="top" secondItem="taz-Ko-Z2t" secondAttribute="top" id="xm4-ZL-CrV"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBg-Mw-ybH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="epr-d9-5em"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHH-gV-TPF" userLabel="Central Button" customClass="HomeTabBarButton" customModule="Telebroom" customModuleProvider="target">
+                                <rect key="frame" x="152" y="-10" width="70" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rHH-gV-TPF" secondAttribute="height" multiplier="1:1" id="qHT-tG-NsH"/>
+                                </constraints>
+                                <state key="normal" image="btn_home_off">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onHomeButtonTapped:" destination="iN0-l3-epB" eventType="touchDown" id="KvZ-cW-KpU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rHH-gV-TPF" firstAttribute="top" secondItem="wXt-N3-Hjy" secondAttribute="top" constant="-10" id="1Ya-hp-r6q"/>
+                            <constraint firstItem="taz-Ko-Z2t" firstAttribute="leading" secondItem="rHH-gV-TPF" secondAttribute="trailing" id="6nF-T5-o4Q"/>
+                            <constraint firstAttribute="bottom" secondItem="rqv-pb-IoY" secondAttribute="bottom" id="9VC-io-XK2"/>
+                            <constraint firstItem="aBg-Mw-ybH" firstAttribute="leading" secondItem="wXt-N3-Hjy" secondAttribute="leading" id="D3T-h6-zyL"/>
+                            <constraint firstItem="rqv-pb-IoY" firstAttribute="leading" secondItem="wXt-N3-Hjy" secondAttribute="leading" id="Hye-Fp-CkV"/>
+                            <constraint firstItem="rqv-pb-IoY" firstAttribute="top" secondItem="wXt-N3-Hjy" secondAttribute="top" id="MLJ-fu-BRF"/>
+                            <constraint firstAttribute="bottom" secondItem="taz-Ko-Z2t" secondAttribute="bottom" id="hJ2-K8-6aW"/>
+                            <constraint firstItem="taz-Ko-Z2t" firstAttribute="top" secondItem="wXt-N3-Hjy" secondAttribute="top" id="kJi-Gd-sVU"/>
+                            <constraint firstAttribute="trailing" secondItem="aBg-Mw-ybH" secondAttribute="trailing" id="kpg-2e-6VJ"/>
+                            <constraint firstAttribute="trailing" secondItem="taz-Ko-Z2t" secondAttribute="trailing" id="sLL-RW-d6m"/>
+                            <constraint firstAttribute="bottom" secondItem="rHH-gV-TPF" secondAttribute="bottom" constant="-10" id="t6I-pp-XM5"/>
+                            <constraint firstItem="aBg-Mw-ybH" firstAttribute="top" secondItem="wXt-N3-Hjy" secondAttribute="top" id="tev-4b-Ug8"/>
+                            <constraint firstItem="rHH-gV-TPF" firstAttribute="centerX" secondItem="wXt-N3-Hjy" secondAttribute="centerX" id="vwa-Gb-Ryp"/>
+                            <constraint firstItem="rHH-gV-TPF" firstAttribute="leading" secondItem="rqv-pb-IoY" secondAttribute="trailing" id="wNn-1Q-hdU"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="XG5-am-w56" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4RT-Hc-cP2"/>
+                <constraint firstAttribute="trailing" secondItem="XG5-am-w56" secondAttribute="trailing" id="Mdw-WC-3AV"/>
+                <constraint firstItem="XG5-am-w56" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="d0y-cb-slr"/>
+                <constraint firstAttribute="bottom" secondItem="XG5-am-w56" secondAttribute="bottom" id="mex-qz-qby"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="homeButton" destination="rHH-gV-TPF" id="tlH-eS-4d9"/>
+                <outlet property="profileButton" destination="ItY-3T-QmO" id="NRD-Vb-rw7"/>
+                <outlet property="searchButton" destination="Pqf-aD-kaz" id="cA3-PP-rOk"/>
+                <outlet property="topLineView" destination="aBg-Mw-ybH" id="sde-pd-VXO"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-186.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_home_off" width="20" height="20"/>
+        <image name="btn_profile_off" width="20" height="20"/>
+        <image name="btn_search_off" width="20" height="20"/>
+    </resources>
+</document>

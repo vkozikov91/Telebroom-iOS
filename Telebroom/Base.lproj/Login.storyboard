@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fp2-gP-5WW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="65M-jJ-Pw5">
+            <objects>
+                <viewController id="BJd-iA-aon" customClass="IntroViewController" customModule="Telebroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wd2-85-Mwa"/>
+                        <viewControllerLayoutGuide type="bottom" id="PGg-Cc-Uxw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NwJ-NW-tbw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6KE-Pb-6qw">
+                                <rect key="frame" x="169" y="374" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="img_logo_alpha" translatesAutoresizingMaskIntoConstraints="NO" id="YHH-gP-rB2">
+                                <rect key="frame" x="147" y="294" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="KoT-Pg-trV"/>
+                                    <constraint firstAttribute="width" constant="80" id="Utw-3m-zNk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196078431372548" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6KE-Pb-6qw" firstAttribute="centerX" secondItem="NwJ-NW-tbw" secondAttribute="centerX" id="6lc-mH-5Q2"/>
+                            <constraint firstItem="YHH-gP-rB2" firstAttribute="centerY" secondItem="NwJ-NW-tbw" secondAttribute="centerY" id="Q3T-Tx-V5E"/>
+                            <constraint firstItem="6KE-Pb-6qw" firstAttribute="top" secondItem="YHH-gP-rB2" secondAttribute="bottom" id="Z6B-Gn-1uI"/>
+                            <constraint firstItem="YHH-gP-rB2" firstAttribute="centerX" secondItem="NwJ-NW-tbw" secondAttribute="centerX" id="haJ-N4-3GJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="j0n-Pe-VXV"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="6KE-Pb-6qw" id="eLS-7J-lEb"/>
+                        <segue destination="rEW-S9-5qx" kind="show" identifier="IntroToMainSegue" id="BnM-y0-b6y"/>
+                        <segue destination="hDE-aS-gyg" kind="show" identifier="IntroToLoginSegue" id="bh4-bn-VeF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHn-b7-uQk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.80000000000001" y="-19.340329835082461"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="DvY-Nn-jE5">
+            <objects>
+                <viewController id="hDE-aS-gyg" customClass="LoginViewController" customModule="Telebroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kfD-gc-5Ox"/>
+                        <viewControllerLayoutGuide type="bottom" id="hCL-4t-T1t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MP5-Zl-tiq" customClass="ThemeGradientView" customModule="Telebroom" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76k-oN-zpJ" userLabel="Keyboard Dependable Container">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9pQ-cg-A4A" userLabel="Main Container">
+                                        <rect key="frame" x="37.5" y="200" width="300" height="205"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-Lz-tm3" customClass="UnderlinedTextField" customModule="Telebroom" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="iep-A8-nWJ"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="hDE-aS-gyg" id="sZC-Oh-WTn"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GDe-M8-uNp" customClass="UnderlinedTextField" customModule="Telebroom" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="300" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="adc-bp-Kot"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="hDE-aS-gyg" id="2bi-an-heR"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iac-6M-9TC" customClass="BubbleButton" customModule="Telebroom" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="125" width="300" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="SE6-AV-tWF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="LOG IN">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onPrimaryButtonPressed:" destination="hDE-aS-gyg" eventType="touchUpInside" id="6Hm-ww-8kF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8n3-nb-E1E" customClass="BubbleButton" customModule="Telebroom" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="165" width="300" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="isB-9n-bf4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Sign Up">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onSecondaryButtonPressed:" destination="hDE-aS-gyg" eventType="touchUpInside" id="xeZ-yN-hRd"/>
+                                                </connections>
+                                            </button>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vi-tG-Mez" userLabel="Names Container">
+                                                <rect key="frame" x="0.0" y="95" width="300" height="0.0"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MO6-pe-Aqr" customClass="UnderlinedTextField" customModule="Telebroom" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="5" width="300" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="5s3-ke-bMe"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="hDE-aS-gyg" id="Jeo-wd-hZt"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Second Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxK-DJ-dVd" customClass="UnderlinedTextField" customModule="Telebroom" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="55" width="300" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Gpt-mu-ZGM"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="hDE-aS-gyg" id="f0T-at-22j"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="MO6-pe-Aqr" secondAttribute="trailing" id="AOg-oQ-6AM"/>
+                                                    <constraint firstItem="MO6-pe-Aqr" firstAttribute="top" secondItem="4vi-tG-Mez" secondAttribute="top" constant="5" id="FPc-zU-YLu"/>
+                                                    <constraint firstAttribute="bottom" secondItem="IxK-DJ-dVd" secondAttribute="bottom" priority="750" constant="5" id="FSg-5b-dkm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IxK-DJ-dVd" secondAttribute="trailing" id="O0E-jB-qdP"/>
+                                                    <constraint firstItem="MO6-pe-Aqr" firstAttribute="leading" secondItem="4vi-tG-Mez" secondAttribute="leading" id="PdE-JD-fPb"/>
+                                                    <constraint firstItem="IxK-DJ-dVd" firstAttribute="top" secondItem="MO6-pe-Aqr" secondAttribute="bottom" constant="10" id="hxg-hD-ZzN"/>
+                                                    <constraint firstItem="IxK-DJ-dVd" firstAttribute="leading" secondItem="4vi-tG-Mez" secondAttribute="leading" id="kPE-Og-WJ8"/>
+                                                    <constraint firstAttribute="height" id="qhE-3C-XxC"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="8n3-nb-E1E" secondAttribute="trailing" id="2md-G1-Ulr"/>
+                                            <constraint firstAttribute="trailing" secondItem="4vi-tG-Mez" secondAttribute="trailing" id="3U0-C4-fxv"/>
+                                            <constraint firstItem="4vi-tG-Mez" firstAttribute="top" secondItem="GDe-M8-uNp" secondAttribute="bottom" constant="5" id="3ib-da-Wbo"/>
+                                            <constraint firstItem="GDe-M8-uNp" firstAttribute="top" secondItem="Ktf-Lz-tm3" secondAttribute="bottom" constant="10" id="7ms-NF-XyS"/>
+                                            <constraint firstAttribute="bottom" secondItem="8n3-nb-E1E" secondAttribute="bottom" id="Ct8-pn-ZG1"/>
+                                            <constraint firstAttribute="trailing" secondItem="iac-6M-9TC" secondAttribute="trailing" id="KC7-3X-Zk5"/>
+                                            <constraint firstItem="GDe-M8-uNp" firstAttribute="leading" secondItem="9pQ-cg-A4A" secondAttribute="leading" id="KIQ-je-ArV"/>
+                                            <constraint firstAttribute="trailing" secondItem="GDe-M8-uNp" secondAttribute="trailing" id="NaV-Nd-nns"/>
+                                            <constraint firstItem="iac-6M-9TC" firstAttribute="leading" secondItem="9pQ-cg-A4A" secondAttribute="leading" id="Q4l-eF-KwM"/>
+                                            <constraint firstItem="iac-6M-9TC" firstAttribute="top" secondItem="4vi-tG-Mez" secondAttribute="bottom" constant="30" id="Utm-hj-soW"/>
+                                            <constraint firstItem="8n3-nb-E1E" firstAttribute="top" secondItem="iac-6M-9TC" secondAttribute="bottom" id="Wsb-OY-3gE"/>
+                                            <constraint firstItem="iac-6M-9TC" firstAttribute="centerX" secondItem="9pQ-cg-A4A" secondAttribute="centerX" id="fZO-oI-vMA"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ktf-Lz-tm3" secondAttribute="trailing" id="iSZ-xT-Atn"/>
+                                            <constraint firstItem="Ktf-Lz-tm3" firstAttribute="top" secondItem="9pQ-cg-A4A" secondAttribute="top" id="ixn-jn-aSe"/>
+                                            <constraint firstItem="4vi-tG-Mez" firstAttribute="leading" secondItem="9pQ-cg-A4A" secondAttribute="leading" id="jrh-t5-7Jp"/>
+                                            <constraint firstItem="8n3-nb-E1E" firstAttribute="centerX" secondItem="9pQ-cg-A4A" secondAttribute="centerX" id="o6z-oa-PSc"/>
+                                            <constraint firstItem="Ktf-Lz-tm3" firstAttribute="leading" secondItem="9pQ-cg-A4A" secondAttribute="leading" id="oMY-sy-Ra9"/>
+                                            <constraint firstAttribute="width" constant="300" id="xkx-RK-Xnn"/>
+                                            <constraint firstItem="8n3-nb-E1E" firstAttribute="leading" secondItem="9pQ-cg-A4A" secondAttribute="leading" id="zIc-zs-98s"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hD6-Do-1FR" userLabel="Title Image View Container">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="img_logo_alpha" translatesAutoresizingMaskIntoConstraints="NO" id="Xzk-fw-drc">
+                                                <rect key="frame" x="147" y="60" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="U6H-q8-NNh"/>
+                                                    <constraint firstAttribute="width" constant="80" id="YPo-D6-NGH"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Xzk-fw-drc" firstAttribute="centerX" secondItem="hD6-Do-1FR" secondAttribute="centerX" id="G8b-8r-PPc"/>
+                                            <constraint firstItem="Xzk-fw-drc" firstAttribute="centerY" secondItem="hD6-Do-1FR" secondAttribute="centerY" id="c0r-Nl-hgF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hD6-Do-1FR" firstAttribute="top" secondItem="76k-oN-zpJ" secondAttribute="top" id="4Yk-90-3tN"/>
+                                    <constraint firstItem="hD6-Do-1FR" firstAttribute="height" secondItem="76k-oN-zpJ" secondAttribute="height" id="5YU-Qz-UuW"/>
+                                    <constraint firstItem="9pQ-cg-A4A" firstAttribute="centerX" secondItem="76k-oN-zpJ" secondAttribute="centerX" id="Ve1-TX-arh"/>
+                                    <constraint firstItem="hD6-Do-1FR" firstAttribute="leading" secondItem="76k-oN-zpJ" secondAttribute="leading" id="Wel-hC-ygh"/>
+                                    <constraint firstAttribute="trailing" secondItem="hD6-Do-1FR" secondAttribute="trailing" id="cYf-WZ-Qu5"/>
+                                    <constraint firstItem="9pQ-cg-A4A" firstAttribute="top" secondItem="hD6-Do-1FR" secondAttribute="bottom" id="odJ-BK-0uK"/>
+                                    <constraint firstItem="9pQ-cg-A4A" firstAttribute="centerY" secondItem="76k-oN-zpJ" secondAttribute="centerY" priority="999" id="rOl-rg-cRk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="76k-oN-zpJ" firstAttribute="top" secondItem="MP5-Zl-tiq" secondAttribute="top" id="FeC-Qc-Cb7"/>
+                            <constraint firstAttribute="bottom" secondItem="76k-oN-zpJ" secondAttribute="bottom" priority="999" id="V0B-aE-vlv"/>
+                            <constraint firstAttribute="trailing" secondItem="76k-oN-zpJ" secondAttribute="trailing" id="aHO-rC-4NX"/>
+                            <constraint firstItem="76k-oN-zpJ" firstAttribute="leading" secondItem="MP5-Zl-tiq" secondAttribute="leading" id="ucl-pt-Cu0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstnameTextField" destination="MO6-pe-Aqr" id="51z-AR-dc1"/>
+                        <outlet property="keyboardDependableConstraint" destination="V0B-aE-vlv" id="HzL-si-lMf"/>
+                        <outlet property="passwordTextField" destination="GDe-M8-uNp" id="ejh-YQ-KHd"/>
+                        <outlet property="primaryButton" destination="iac-6M-9TC" id="Rd3-le-Y1t"/>
+                        <outlet property="secondaryButton" destination="8n3-nb-E1E" id="wU4-bo-1ES"/>
+                        <outlet property="secondnameTextField" destination="IxK-DJ-dVd" id="Epe-JL-Yuu"/>
+                        <outlet property="signupContainerHiddenConstraint" destination="qhE-3C-XxC" id="1WB-GG-Uho"/>
+                        <outlet property="titleImageView" destination="Xzk-fw-drc" id="DgI-Ce-416"/>
+                        <outlet property="titleLabelCenteredConstraint" destination="5YU-Qz-UuW" id="TOu-p0-enR"/>
+                        <outlet property="usernameTextField" destination="Ktf-Lz-tm3" id="U0P-6k-Onb"/>
+                        <segue destination="rEW-S9-5qx" kind="show" identifier="LoginToMainSegue" id="xdY-xV-LRY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oxb-aU-kgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991.20000000000005" y="-19.340329835082461"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="RRO-lo-y57">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="rEW-S9-5qx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vX7-uc-kke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="507"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="cZA-Yr-i1q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Fp2-gP-5WW" customClass="MainNavigationController" customModule="Telebroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iCD-Hr-oJD">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BJd-iA-aon" kind="relationship" relationship="rootViewController" id="vQF-qc-S85"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbg-cF-cQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-718" y="-19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_logo_alpha" width="60" height="60"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xdY-xV-LRY"/>
+    </inferredMetricsTieBreakers>
+</document>

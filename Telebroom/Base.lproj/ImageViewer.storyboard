@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GYo-bv-rWj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Viewer View Controller-->
+        <scene sceneID="qfk-Kr-cOD">
+            <objects>
+                <viewController id="GYo-bv-rWj" customClass="ImageViewerViewController" customModule="Telebroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bhz-b6-FWW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5d-hn-pTA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oWc-JW-GgV" appends="YES" id="gfu-LF-7Av"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.85078660102739723" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z5d-hn-pTA" firstAttribute="trailing" secondItem="vGG-IP-bWG" secondAttribute="trailing" id="3se-Z6-TKM"/>
+                            <constraint firstItem="z5d-hn-pTA" firstAttribute="bottom" secondItem="vGG-IP-bWG" secondAttribute="bottom" id="8xO-dO-8qW"/>
+                            <constraint firstItem="z5d-hn-pTA" firstAttribute="top" secondItem="Bhz-b6-FWW" secondAttribute="top" id="P9z-5b-FXE"/>
+                            <constraint firstItem="z5d-hn-pTA" firstAttribute="leading" secondItem="vGG-IP-bWG" secondAttribute="leading" id="qQF-q9-efg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vGG-IP-bWG"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="z5d-hn-pTA" id="WEq-Pg-seZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qcv-kD-RpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oWc-JW-GgV">
+                    <connections>
+                        <action selector="onTapGesture:" destination="GYo-bv-rWj" id="akd-bt-GcZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="140" y="158"/>
+        </scene>
+    </scenes>
+</document>
